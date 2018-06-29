@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 function showRepositories(event, data) {
+  console.log(typeof this.responseText)
   const repos = JSON.parse(this.responseText)
   const src = document.getElementById("repository-template").innerHTML
   const template = Handlebars.compile(src)
